@@ -4,7 +4,7 @@ import (
 	jaegerModels "github.com/jaegertracing/jaeger/model/json"
 
 	"github.com/kiali/k-charted/model"
-	"github.com/kiali/kiali/business"
+	"github.com/kandarpapsl/kiali/kiali/business"
 	"github.com/kiali/kiali/graph/config/cytoscape"
 	"github.com/kiali/kiali/handlers"
 	"github.com/kiali/kiali/jaeger"
