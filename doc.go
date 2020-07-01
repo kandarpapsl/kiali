@@ -4,10 +4,10 @@ import (
 	jaegerModels "github.com/jaegertracing/jaeger/model/json"
 
 	"github.com/kandarpapsl/kiali/business"
-	"github.com/kandarpapsl/kiali/k-charted/model"
 	"github.com/kandarpapsl/kiali/graph/config/cytoscape"
 	"github.com/kandarpapsl/kiali/handlers"
 	"github.com/kandarpapsl/kiali/jaeger"
+	"github.com/kandarpapsl/kiali/k-charted/model"
 	"github.com/kandarpapsl/kiali/models"
 	"github.com/kandarpapsl/kiali/prometheus"
 	"github.com/kandarpapsl/kiali/status"
