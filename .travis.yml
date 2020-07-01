@@ -1,6 +1,10 @@
 language: go
 
 arch: ppc64le
+
+addons:
+  apt:
+    - tree
   
 go:
 - 1.14.2
@@ -14,6 +18,7 @@ notifications:
     on_failure: change
 
 before_script:
+  - tree ${HOME}
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
 
 env:
