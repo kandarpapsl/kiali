@@ -1,9 +1,6 @@
 language: go
 
 arch: ppc64le
-
-git:
-  clone: false
   
 go:
 - 1.14.2
@@ -17,8 +14,6 @@ notifications:
     on_failure: change
 
 before_script:
-  - git clone http://github.com/${TRAVIS_REPO_SLUG} ${HOME}/kiali
-  - cd ${HOME}/kiali
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
 
 env:
