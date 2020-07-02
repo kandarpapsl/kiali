@@ -3,15 +3,15 @@ package main
 import (
 	jaegerModels "github.com/jaegertracing/jaeger/model/json"
 
+	"github.com/kiali/k-charted/model"
 	"github.com/kiali/kiali/business"
 	"github.com/kiali/kiali/graph/config/cytoscape"
 	"github.com/kiali/kiali/handlers"
 	"github.com/kiali/kiali/jaeger"
-	"github.com/kiali/kiali/k-charted/model"
 	"github.com/kiali/kiali/models"
 	"github.com/kiali/kiali/prometheus"
 	"github.com/kiali/kiali/status"
-)
+	)
 
 /////////////////////
 // SWAGGER PARAMETERS - GENERAL
