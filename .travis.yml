@@ -2,9 +2,6 @@ language: go
 
 arch: ppc64le
 
-
-go_import_path: github.com/kandarpapsl/kiali
-
 go:
 - 1.14.2
 
@@ -20,7 +17,7 @@ before_install:
   - cd ${HOME}/gopath/src/github.com
   - mv kandarpapsl kiali
   - cd $HOME/gopath/src/github.com/kiali/kiali
-  - echo "Building & Installing Swagger"
+  - echo "Building & Installing Swagger for PPC64LE"
   - dir=$(mktemp -d)
   - git clone https://github.com/go-swagger/go-swagger "$dir"
   - cd $dir
@@ -42,8 +39,7 @@ env:
 # decided to no longer commit vendor dependencies into the source tree.
 # See: https://github.com/golang/dep/blob/master/docs/FAQ.md#should-i-commit-my-vendor-directory
 install:
- - echo "no doing . make swagger-install"
- - find /home/travis/gopath/bin
+ - echo "not doing . make swagger-install"
  - make lint-install
 
 script:
