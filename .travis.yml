@@ -5,11 +5,11 @@ arch: ppc64le
 addons:
   apt:
     - tree
-  
-go:
-- 1.14.2
 
 go_import_path: github.com/kandarpapsl/kiali
+
+go:
+- 1.14.2
 
 # The channel name "chat.freenode.net#kiali" is encrypted to prevent IRC spam from forks
 notifications:
