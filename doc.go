@@ -5,8 +5,8 @@ import (
 
 	"github.com/kandarpapsl/kiali/jaeger"
 	"github.com/kiali/k-charted/model"
-	"github.com/kiali/kiali/business"
-	"github.com/kiali/kiali/graph/config/cytoscape"
+	"github.com/kiali/business"
+	"github.com/kiali/graph/config/cytoscape"
 	"github.com/kiali/kiali/handlers"
 	"github.com/kiali/models"
 	"github.com/kiali/prometheus"
