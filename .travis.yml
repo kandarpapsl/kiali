@@ -1,6 +1,6 @@
 language: go
 
-arch: ppc64le
+arch: amd64
 
 
 go_import_path: github.com/kandarpapsl/kiali
