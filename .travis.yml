@@ -2,9 +2,6 @@ language: go
 
 arch: ppc64le
 
-addons:
-  apt:
-    - tree
 
 go_import_path: github.com/kandarpapsl/kiali
 
@@ -20,10 +17,10 @@ notifications:
     on_failure: change
 
 before_install:
-  - tree ${HOME}
+  - find ${HOME}
 
 before_script:
-  - tree ${HOME}
+  - find ${HOME}
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
 
 env:
