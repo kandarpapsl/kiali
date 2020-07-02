@@ -17,8 +17,10 @@ notifications:
     on_failure: change
 
 before_install:
+  - OLD_PWD=$PWD
   - cd ${HOME}/gopath/src/github.com
   - mv kandarpapsl kiali
+  - cd $OLD_PWD
 
 before_script:
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
