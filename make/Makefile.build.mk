@@ -107,7 +107,7 @@ ifeq ($(GOARCH), ppc64le)
 	$(eval DIR := $(shell mktemp -d))
 	@git clone https://github.com/go-swagger/go-swagger ${DIR} 
 	@cd ${DIR}
-	@go install ./cmd/swagger
+	${GO} install ./cmd/swagger
 else
 	@echo "Installing swagger binary to ${GOPATH}/bin..."
 	@curl https://github.com/go-swagger/go-swagger/releases/download/v0.22.0/swagger_linux_${GOARCH} --create-dirs -Lo ${GOPATH}/bin/swagger && chmod +x ${GOPATH}/bin/swagger
