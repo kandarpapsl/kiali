@@ -100,8 +100,7 @@ dep-update:
 # Swagger Documentation
 #
 
-## swagger-install: Install swagger from 
-hub
+## swagger-install: Install swagger from github
 swagger-install:
 	ifeq ($(GOARCH), ppc64le)
 		@echo "Building & Installing swagger binary to ${GOPATH}/bin..."
