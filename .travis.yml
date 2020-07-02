@@ -9,6 +9,8 @@ addons:
 go:
 - 1.14.2
 
+go_import_path: github.com/kandarpapsl/kiali
+
 # The channel name "chat.freenode.net#kiali" is encrypted to prevent IRC spam from forks
 notifications:
   irc:
