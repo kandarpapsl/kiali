@@ -11,7 +11,7 @@ import (
 	"github.com/kiali/kiali/models"
 	"github.com/kiali/kiali/prometheus"
 	"github.com/kiali/kiali/status"
-	)
+)
 
 /////////////////////
 // SWAGGER PARAMETERS - GENERAL
