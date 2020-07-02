@@ -1,6 +1,6 @@
 language: go
 
-arch: amd64
+arch: ppc64le
 
 
 go_import_path: github.com/kandarpapsl/kiali
@@ -20,6 +20,12 @@ before_install:
   - cd ${HOME}/gopath/src/github.com
   - mv kandarpapsl kiali
   - cd $HOME/gopath/src/github.com/kiali/kiali
+  - echo "Building & Installing Swagger"
+  - dir=$(mktemp -d)
+  - git clone https://github.com/go-swagger/go-swagger "$dir"
+  - cd $dir
+  - go install ./cmd/swagger
+  
 
 before_script:
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
