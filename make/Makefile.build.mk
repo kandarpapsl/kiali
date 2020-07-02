@@ -107,6 +107,8 @@ ifeq ($(GOARCH), ppc64le)
 	$(eval DIR := $(shell mktemp -d))
 	@git clone https://github.com/go-swagger/go-swagger ${DIR} 
 	cd ${DIR}
+	@echo "Currently in ${PWD}..."
+	ls
 	${GO_BUILD_ENVVARS} ${GO} install ./cmd/swagger
 else
 	@echo "Installing swagger binary to ${GOPATH}/bin..."
