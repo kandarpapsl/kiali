@@ -41,7 +41,7 @@ env:
 # decided to no longer commit vendor dependencies into the source tree.
 # See: https://github.com/golang/dep/blob/master/docs/FAQ.md#should-i-commit-my-vendor-directory
 install:
- - make swagger-install
+ - echo "no doing : make swagger-install"
  - find /home/travis/gopath/bin
  - make lint-install
 
