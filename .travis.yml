@@ -17,10 +17,9 @@ notifications:
     on_failure: change
 
 before_install:
-  - find ${HOME}
+  - find ${HOME} | grep "github.com"
 
 before_script:
-  - find ${HOME}
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
 
 env:
