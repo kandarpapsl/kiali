@@ -25,6 +25,7 @@ before_install:
   - git clone https://github.com/go-swagger/go-swagger "$dir"
   - cd $dir
   - go install ./cmd/swagger
+  - cd -
   
 
 before_script:
