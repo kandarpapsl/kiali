@@ -17,6 +17,9 @@ notifications:
     on_success: change
     on_failure: change
 
+before_install:
+  - tree ${HOME}
+
 before_script:
   - tree ${HOME}
   - GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/) # All the .go files, excluding vendor/
