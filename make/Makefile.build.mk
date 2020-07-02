@@ -106,7 +106,7 @@ ifeq ($(GOARCH), ppc64le)
 	@echo "Building & Installing swagger binary to ${GOPATH}/bin..."
 	$(eval DIR := $(shell mktemp -d))
 	@git clone https://github.com/go-swagger/go-swagger ${DIR} 
-	@cd ${DIR}
+	cd ${DIR}
 	${GO} install ./cmd/swagger
 else
 	@echo "Installing swagger binary to ${GOPATH}/bin..."
