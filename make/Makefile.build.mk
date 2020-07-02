@@ -102,16 +102,16 @@ dep-update:
 
 ## swagger-install: Install swagger from github
 swagger-install:
-	ifeq ($(GOARCH), ppc64le)
-		@echo "Building & Installing swagger binary to ${GOPATH}/bin..."
-		dir=$(mktemp -d)
-		@git clone https://github.com/go-swagger/go-swagger "$dir" 
-		@cd "$dir"
-		@go install ./cmd/swagger
-	else
-		@echo "Installing swagger binary to ${GOPATH}/bin..."
-		@curl https://github.com/go-swagger/go-swagger/releases/download/v0.22.0/swagger_linux_${GOARCH} --create-dirs -Lo ${GOPATH}/bin/swagger && chmod +x ${GOPATH}/bin/swagger
-	endif
+ifeq ($(GOARCH), ppc64le)
+	@echo "Building & Installing swagger binary to ${GOPATH}/bin..."
+	dir=$(mktemp -d)
+	@git clone https://github.com/go-swagger/go-swagger "$dir" 
+	@cd "$dir"
+	@go install ./cmd/swagger
+else
+	@echo "Installing swagger binary to ${GOPATH}/bin..."
+	@curl https://github.com/go-swagger/go-swagger/releases/download/v0.22.0/swagger_linux_${GOARCH} --create-dirs -Lo ${GOPATH}/bin/swagger && chmod +x ${GOPATH}/bin/swagger
+endif
 
 ## swagger-validate: Validate that swagger.json is correctly. Runs `swagger validate` internally
 swagger-validate:
