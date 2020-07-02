@@ -104,9 +104,9 @@ dep-update:
 swagger-install:
 ifeq ($(GOARCH), ppc64le)
 	@echo "Building & Installing swagger binary to ${GOPATH}/bin..."
-	dir=$(mktemp -d)
-	@git clone https://github.com/go-swagger/go-swagger "$dir" 
-	@cd "$dir"
+	$(eval DIR := $(shell mktemp -d))
+	@git clone https://github.com/go-swagger/go-swagger ${DIR} 
+	@cd ${DIR}
 	@go install ./cmd/swagger
 else
 	@echo "Installing swagger binary to ${GOPATH}/bin..."
